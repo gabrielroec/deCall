@@ -4,6 +4,10 @@ import { db } from "@/lib/db";
 import { NavigationAction } from "@/components/navigation/navigation-action";
 import { Separator } from "../ui/separator";
 import { ScrollArea } from "../ui/scroll-area";
+import { NavigationItem } from "./navigation-item";
+import { ModeToggle } from "../mode-toggle";
+import { UserButton } from "@clerk/nextjs";
+import { ActionTooltip } from "./action-tooltip";
 
 const NavigationSidebar = async () => {
   const profile = await currentProfile();
@@ -26,9 +30,35 @@ const NavigationSidebar = async () => {
       <Separator className="h-[2px] bg-zinc-300 dark:bg-zinc-700 rounded-md w-10 mx-auto" />
       <ScrollArea className="flex-1 w-full">
         {server.map((server) => (
-          <div key={server.id}>{server.name}</div>
+          <div key={server.id} className="mb-4">
+            <NavigationItem
+              id={server.id}
+              name={server.name}
+              imageUrl={server.imageUrl}
+            />
+          </div>
         ))}
       </ScrollArea>
+      <div className="pb-3 mt-auto flex items-center flex-col gap-y-4">
+        <ModeToggle className="w-[48px] h-[48px]" />
+        <ActionTooltip
+          side="right"
+          align="center"
+          label="Configure sua conta"
+          className="relative left-[12px] top-[-4px ]"
+        >
+          <div>
+            <UserButton
+              afterSignOutUrl="/"
+              appearance={{
+                elements: {
+                  avatarBox: "h-[48px] w-[48px]",
+                },
+              }}
+            />
+          </div>
+        </ActionTooltip>
+      </div>
     </div>
   );
 };

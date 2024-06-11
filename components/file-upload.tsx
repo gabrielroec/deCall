@@ -32,7 +32,6 @@ export const FileUpload = ({ onChange, value, endpoint }: FileUploadProps) => {
       <UploadDropzone
         content={{
           label: "Clique para selecionar a sua imagem ou arraste para cá.",
-          button: "Enviar",
         }}
         endpoint={endpoint}
         onClientUploadComplete={(res) => {
