@@ -79,15 +79,11 @@ export const CreateServerModal = () => {
               <UserButton />
             </div>
             <DialogTitle className="text-2xl text-center font-bold">
-              <p>Bem-vindo ao deCall!</p>
+              <p>Create your server</p>
               <p className="text-sm">
-                Crie seu servidor, seus amigos já estão te esperando!
+                You can customize the name and image whatever you want!
               </p>
             </DialogTitle>
-            <DialogDescription className="text-center text-zinc-500">
-              Personalize o seu servidor com um nome e uma imagem. Você pode
-              personalizar isso quando você quiser!
-            </DialogDescription>
           </DialogHeader>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -116,13 +112,13 @@ export const CreateServerModal = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="uppercase text-xs font-bold text-zinc-500 dar:text-secondary">
-                        Nome do servidor
+                        Server name
                       </FormLabel>
                       <FormControl>
                         <Input
                           disabled={isLoading}
                           className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                          placeholder="Digite o nome do seu servidor"
+                          placeholder="Type the server name"
                           {...field}
                         />
                       </FormControl>
@@ -133,7 +129,7 @@ export const CreateServerModal = () => {
               </div>
               <DialogFooter className="bg-gray-100 px-6 py-4">
                 <Button variant={"primary"} disabled={isLoading}>
-                  Criar servidor
+                  Create server
                 </Button>
               </DialogFooter>
             </form>

@@ -81,9 +81,9 @@ export const InitialModal = () => {
               <UserButton />
             </div>
             <DialogTitle className="text-2xl text-center font-bold">
-              <p>Bem-vindo ao deCall!</p>
+              <p>Wellcome to DeCall!</p>
               <p className="text-sm">
-                Crie seu servidor, seus amigos já estão te esperando!
+                Create your server! Your friends are already waiting for you!
               </p>
             </DialogTitle>
             <DialogDescription className="text-center text-zinc-500">
@@ -124,7 +124,7 @@ export const InitialModal = () => {
                         <Input
                           disabled={isLoading}
                           className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                          placeholder="Digite o nome do seu servidor"
+                          placeholder="Type the server name"
                           {...field}
                         />
                       </FormControl>

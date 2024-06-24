@@ -30,9 +30,6 @@ export const FileUpload = ({ onChange, value, endpoint }: FileUploadProps) => {
   return (
     <div>
       <UploadDropzone
-        content={{
-          label: "Clique para selecionar a sua imagem ou arraste para cá.",
-        }}
         endpoint={endpoint}
         onClientUploadComplete={(res) => {
           onChange(res?.[0].url);
