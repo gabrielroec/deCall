@@ -38,10 +38,10 @@ export const CreateServerModal = () => {
 
   const formSchema = z.object({
     name: z.string().min(1, {
-      message: "O nome do servidor é obrigatório",
+      message: "The server name is required",
     }),
     imageUrl: z.string().min(1, {
-      message: "A imagem é obrigatória",
+      message: "Image is required (click in upload)",
     }),
   });
 
@@ -75,9 +75,6 @@ export const CreateServerModal = () => {
       <Dialog open={isModelOpen} onOpenChange={handleClose}>
         <DialogContent className="bg-white text-black p-0 overflow-hidden">
           <DialogHeader className="pt-8 px-6 flex items-center">
-            <div className="">
-              <UserButton />
-            </div>
             <DialogTitle className="text-2xl text-center font-bold">
               <p>Create your server</p>
               <p className="text-sm">

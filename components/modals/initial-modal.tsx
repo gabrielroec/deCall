@@ -40,10 +40,10 @@ export const InitialModal = () => {
 
   const formSchema = z.object({
     name: z.string().min(1, {
-      message: "O nome do servidor é obrigatório",
+      message: "The server name is required",
     }),
     imageUrl: z.string().min(1, {
-      message: "A imagem é obrigatória",
+      message: "Image is required (click in upload)",
     }),
   });
 
