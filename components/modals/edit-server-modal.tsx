@@ -37,7 +37,6 @@ export const EditServerModal = () => {
 
   const isModelOpen = isOpen && type == "editServer";
   const { server } = data;
-  console.log(server);
 
   const formSchema = z.object({
     name: z.string().min(1, {

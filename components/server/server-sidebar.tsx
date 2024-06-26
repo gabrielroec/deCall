@@ -9,7 +9,6 @@ interface ServerSidebarProps {
 }
 const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
   const profile = await currentProfile();
-  console.log(profile);
 
   if (!profile) {
     return redirect("/");
