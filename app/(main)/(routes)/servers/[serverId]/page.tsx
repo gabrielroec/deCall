@@ -13,6 +13,6 @@ const ServerIdPage = async () => {
     },
   });
 
-  return <div className="">{server.name}</div>;
+  return <div className="">{server!.name}</div>;
 };
 export default ServerIdPage;
